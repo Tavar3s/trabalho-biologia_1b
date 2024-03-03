@@ -20,7 +20,6 @@ main {
 
 header {
     background-color: transparent;
-    padding: 100px 0;
     text-align: center;
 }
 
@@ -66,8 +65,10 @@ footer {
         margin: 0 20vw;
         border-radius: 10px;
     }
+
     h1 {
         font-size: 4.5vw;
+        padding: 100px 0;
     }
 
     section {
@@ -146,8 +147,8 @@ footer {
     }
 
     h1 {
-        font-size: 45px;
-        padding: 10px;
+        font-size: 7vw;
+        padding: 50px 0;
     }
 
     section {
@@ -160,7 +161,7 @@ footer {
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 6vw;
         padding-bottom: 10px;
     }
 
