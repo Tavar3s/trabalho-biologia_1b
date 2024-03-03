@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:wght@400;700&display=swap');
 
+/* Geral */
 * {
     margin: 0px;
     padding: 0px;
@@ -9,72 +10,165 @@
 }
 
 body {
-    background-image: url(png/bg-img.jpg);
-    background-attachment: fixed;
-    background-position: left center;
+    background: #ddd url(png/bg-img.jpg) no-repeat center fixed;
+}
+
+main {
+    background-color: white;
+    padding: 15px;
 }
 
 header {
     background-color: transparent;
-    margin: 30px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
 h1 {
     color: #fff;
-    font-size: 4vw;
     text-shadow: 0px 2px 5px black;
-}
-
-main {
-    background-color: white;
-    margin: 0 20vw;
-    padding: 15px;
-    border-radius: 10px;
 }
 
 section {
     background-color: #ddd;
     border-radius: 6px;
     min-height: 260px;
-    margin: 15px 0;
-    padding: 8px 0;
+    margin-bottom: 15px;
+    padding: 20px 0;
     box-shadow: 0px 3px 5px #0004;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-h2 {
-    grid-area: 1 / 2 / 2 / 3;
-    font-size: 52px;
-    margin-top: 35px;
 }
 
 img {
-    grid-area: 1 / 1 / 3 / 2;
-    border-radius: 50%;
-    width: 256px;
-    box-shadow: 4px 4px 3px #0004;
-    margin: auto;
+    border-radius: 20%;
 }
 
-p {
-    grid-area: 2 / 2 / 3 / 3;
+ul {
+    list-style-type: none;
+    line-height: 35px;
+}
+
+a {
+    color: #000;
 }
 
 footer {
-
+    text-align: center;
+    background-color: #ddd;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
-/* Específicos */
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    main {
+        margin: 0 20vw;
+        border-radius: 10px;
+    }
+    h1 {
+        font-size: 4.5vw;
+    }
 
-#fonte {
-    display: block;
-    min-height: 0;
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 350px;
+    }
+
+    h2 {
+        grid-area: 1 / 2 / 2 / 3;
+        font-size: 48px;
+        margin-top: 35px;
+        padding: 0px 5px;
+    }
+
+    img {
+        grid-area: 1 / 1 / 3 / 2;
+        width: 17vw;
+        box-shadow: 4px 4px 3px #0004;
+        margin: auto;
+    }
+
+    p {
+        grid-area: 2 / 2 / 3 / 3;
+        padding: 15px 30px 30px 5px;
+        text-align: justify;
+        text-indent: 50px;
+    }
+
+    ul {
+        margin-left: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        columns: 3;
+        color: black;
+    }
+
+    /* Específicos */
+
+    #fonte {
+        display: block;
+        padding: 25px;
+        min-height: 0;
+    }
+
+    #fonte>h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #competição > h2 {
+        font-size: 48px;
+        padding-bottom: 10px;
+    }
+
+    #parasitismo {
+        max-height: 500px;
+    }
+
+    #parasitismo>p {
+        margin-top: -60px;
+    }
 }
 
-#competição > h2 {
-    font-size: 48px;
-    padding-bottom: 10px;
+@media screen and (max-width: 1200px) {
+    body {
+        background-position: center;
+    }
+
+    main {
+        min-width: 320px;
+        margin: 0px 5px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 60px;
+        padding: 20px;
+    }
+
+    section {
+        padding: 25px;
+        text-align: center;
+    }
+
+    p, a {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    img {
+        padding-bottom: 20px;
+    }
+
+    #fonte {
+        min-height: 0;
+    }
 }
