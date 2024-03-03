@@ -146,8 +146,8 @@ footer {
     }
 
     h1 {
-        font-size: 60px;
-        padding: 20px;
+        font-size: 45px;
+        padding: 10px;
     }
 
     section {
@@ -156,7 +156,7 @@ footer {
     }
 
     p, a {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     h2 {
